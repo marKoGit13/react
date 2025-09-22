@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const FormularioLogin = () => {
+const FormularioLogin = (props : FormularioLoginProps) => {
 
     const [ userName, setUserName ] = useState<string>("")
     const [ password, setPassword ] = useState<string>("")
@@ -31,10 +31,15 @@ const FormularioLogin = () => {
         </div>
 
         <button className="btn btn-success w-100 mt-3" 
-            type='button'>
+            type='button'
+            onClick={ () => {props.onLogin(userName, password)} }>
                 Ingresar
         </button>
     </form>
+}
+
+interface FormularioLoginProps{
+    onLogin : (usernma : string, password : string) => void
 }
 
 export default FormularioLogin
