@@ -3,10 +3,10 @@ import Titulo from "./Titulo"
 
 import "./SeccionCentral.css"
 
-const SeccionCentral = () => {
+const SeccionCentral = (props : SeccionCentralProps) => {
     return <div>
         { /* este es un comentario */ }
-        <Titulo texto={"Login"} color={"green"}/>
+        <Titulo texto={props.texto} color={"green"}/>
         <div className="centrar">
             <img className="logo" 
                 src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Universidad_de_Lima_logo.png' />
@@ -15,4 +15,7 @@ const SeccionCentral = () => {
     </div>
 }
 
+interface SeccionCentralProps{
+    texto : string
+}
 export default SeccionCentral

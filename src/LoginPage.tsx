@@ -7,7 +7,7 @@ const LoginPage = () => {
                 &nbsp;
             </div>
             <div className="col">
-                <SeccionCentral />
+                <SeccionCentral texto={"SuperLogin"} />
             </div>
             <div className="col">
                 &nbsp;
